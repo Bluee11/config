@@ -19,24 +19,24 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 ###Software
 
 #This line is for terminal stuff
-sudo dnf install alacritty bpytop neofetch vim
+dnf install alacritty bpytop neofetch vim
 
 #this line I think installs codecs that stuff like Firefox needs to play videos
-sudo dnf groupupdate sound-and-video
+dnf groupupdate sound-and-video
 
 #This line should install Nvidia drivers  
-sudo dnf install akmod-nvidia
+dnf install akmod-nvidia
 
 #This line should install the stuff needed for a graphical enviornment (display manager, window manager, etc.)
-sudo dnf install lightdm i3-gaps rofi polybar
+dnf install lightdm lightdm-slick-greeter i3-gaps rofi polybar
 
 #this line should install extra programs like Steam and Discord. If you don't want them you can just remove what you don't want.
-sudo dnf install steam discord lutris 
+dnf install steam discord lutris 
 
 ###Config files
 
 #these lines should copy the files from the config folder added by cloning my repo, and placing them in the .config folder
-cp /config/alacritty .config -r
+cp /config/alacritty .config/ -r
 cp /config/i3 .config/ -r
 cp /config/polybar .config/ -r
 cp /config/rofi .config/ -r
