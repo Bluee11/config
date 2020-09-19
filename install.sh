@@ -8,13 +8,13 @@
 ###Repositories
 
 #This repo allows you to install Alacritty which at the moment is my preferred terminal
-sudo dnf copr enable pschyska/alacritty
+dnf copr enable pschyska/alacritty
 
 #This repo allows you to install i3-gaps instead of the standard i3 that's already in the main Fedora repos
-sudo dnf copr enable fuhrmann/i3-gaps
+dnf copr enable fuhrmann/i3-gaps
 
 #This should enable the RPMFusion repos
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 ###Software
 
