@@ -1,0 +1,5 @@
+modi: window,run,ssh,drun
+rofi.lines:10
+rofi.color-normal:  #10100E, #C6C6C4, #10100E, #C6C6C4, #10100E
+rofi.color-window:  #10100E, #0087BD, #005fff
+rofi.font:"Liberation Mono" 16
