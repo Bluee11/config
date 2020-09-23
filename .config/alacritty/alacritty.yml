@@ -1,4 +1,8 @@
-#Font Configuration
+# General Settings
+ background_opacity: 0.60
+ save_to_clipboard: true
+
+# Font Configuration
 
  font:
    size: 10
@@ -14,9 +18,6 @@
      family: Liberation Mono
      style: Italic
      
-#Ayu Dark
-#Base 16
-
 # Colors (Blood Moon)
  colors:
  # Default colors
