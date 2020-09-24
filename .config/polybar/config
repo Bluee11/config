@@ -28,7 +28,7 @@ font-1 = Font Awesome 5 Free:pixelsize=10;3
 font-2 = Font Awesome 5 Free Solid:pixelsize=10;3
 font-3 = Font Awesome 5 Brands:pixelsize=10;3
 
-modules-left   = memory cpu temperature network
+modules-left   = memory cpu temperature
 modules-center = i3 
 modules-right  = pulseaudio date powermenu
 
@@ -176,23 +176,6 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline         = #007FFF
 
 label = %date%  %time%
-
-[module/network]
-type = internal/network
-interface = wlp3s0 
-interval = 2
-
-udspeed-minwidth = 3
-accumulate-stats = true
-unknown-as-up = true
-
-format-connected = <label-connected>
-format - disconnected = <label-disconnected>
-#format-packetloss = <animation-packetloss> <label-connected>
-
-label-connected = %upspeed:9% %downspeed:9%
-label-disconnected = not connected
-
 
 ### Colors
 [colors]

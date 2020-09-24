@@ -154,7 +154,7 @@ bindsym $mod+Tab    exec rofi -show drun
 exec_always --no-startup-id picom -b --experimental-backends
 
 #Feh
-exec_always --no-startup-id feh --bg-scale ~/Pictures/TwinBlues.jpg 
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/FlatBlue.png
 
 #Terminal
 bindsym $mod+Return exec alacritty
