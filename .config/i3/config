@@ -148,7 +148,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #Rofi
-bindsym $mod+Tab    exec rofi -show drun
+bindsym $mod+Tab    exec rofi -show drun 
 
 #Picom
 exec_always --no-startup-id picom -b --experimental-backends
