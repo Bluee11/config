@@ -28,8 +28,10 @@ dnf groupupdate sound-and-video -y
 dnf install akmod-nvidia -y
 
 #This should install and set up Lightdm as the display manager.)
-dnf install Xorg lightdm lightdm-webkit2-greeter 
+dnf install Xorg lightdm lightdm-slick-greeter -y 
 
+systemctl enable lightdm.service
+systemctl set-default graphical.target
 
 #This should install a file manager, text editor, etc.
 dnf install thunar notepadqq
