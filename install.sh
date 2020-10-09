@@ -37,8 +37,12 @@ dnf install i3-gaps rofi polybar -y
 
 # This line installs fontawesome which I use for icons for my workspaces on polybar
 dnf install fontawesome-fonts -y
+
+# This installs pulseaudio, and pulseeffects
+dnf install pulseaudio pulseeffects -y
+
 # This installs general software like a file explorer, a text editor, etc.
-dnf install Firefox thunar notepadqq flameshot -y
+dnf install firefox thunar notepadqq flameshot lxappearance -y
 
 # This instals Game launchers and chat software like Lutris, Steam, and Discord.
 dnf install steam discord lutris -y 
