@@ -22,3 +22,5 @@ export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;14m\][\w]\[$(tput sgr
 #bpytop - bashtop
 alias bashtop="bpytop"
 alias mic="pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1"
+alias blueebot="cd ~/Documents/Bluee/BlueeBot; python3 BlueeBotv4.py"
+alias EDMC="cd ~/Documents/Elite\ Dangerous/EDMarketConnector/; ./EDMarketConnector.py"

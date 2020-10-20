@@ -151,7 +151,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $mod+Tab    exec rofi -show drun 
 
 #Picom
-exec_always --no-startup-id picom -b --experimental-backends
+exec_always --no-startup-id picom --experimental-backends
 
 #Feh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/FlatBlue.png
