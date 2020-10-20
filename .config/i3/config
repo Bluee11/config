@@ -136,6 +136,8 @@ client.background       #ffffff
 ### Gaps
 gaps inner 20
 
+bindsym $mod+G       gaps inner all toggle 20
+
 ### Launch Programs
 
 #xss-lock

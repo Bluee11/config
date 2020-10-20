@@ -19,7 +19,7 @@ export PATH
 
 export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;14m\][\w]\[$(tput sgr0)\]:\\$ \[$(tput sgr0)\]"
 
-#bpytop - bashtop
+#Bashtop
 alias bashtop="bpytop"
 
 # I use this to reset my mic playback incase multiple are running at the same time.
@@ -33,3 +33,4 @@ alias EDMC="cd ~/Documents/Elite\ Dangerous/EDMarketConnector/; ./EDMarketConnec
 
 #This is to start Alt1 Toolkit (a Runescape tool)
 alias Alt1="cd Documents/Alt1; ./alt1run.sh"
+

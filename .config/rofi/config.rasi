@@ -1,84 +1,36 @@
 configuration {
-	modi: "window,run,ssh";
-
-	fixed-num-lines: true;
-	show-icons: true;
-	terminal: "alacritty"; 
-	ssh-client: "ssh";
-	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
-	run-command: "{cmd}";
-	run-list-command: "";
-	run-shell-command: "{terminal} -e {cmd}";
-	window-command: "wmctrl -i -R {window}";
-	window-match-fields: "all";
-	icon-theme:"papirus";
-	drun-match-fields: "name,generic,exec,categories";
-	drun-show-actions: false;
-	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	disable-history: false;
-	ignored-prefixes: "";
-	sort: false;
-	case-sensitive: false;
-	cycle: true;
-	sidebar-mode: false;
-	eh: 1;
-	auto-select: false;
-	parse-hosts: false;
-	parse-known-hosts: true;
-	combi-modi: "window,run";
-	matching: "normal";
-	tokenize: true;
-	m: "-5";
-	line-margin: 2;
-	line-padding: 1;
-	separator-style: "dash";
-	hide-scrollbar: false;
-	fullscreen: false;
-	fake-transparency: false;
-	dpi: -1;
-	threads: 0;
-	scrollbar-width: 8;
-	scroll-method: 0;
-	fake-background: "screenshot";
-	window-format: "{w}    {c}   {t}";
-	click-to-exit: true;
-	show-match: true;
-	background-color: "10100E";
-	text-color: "#C6C6C4";
-        selbg: #10100E;
-        actbg: #10100E;
-        urgbg: #10100E;
-        winbg: #10100E;
-	selected-normal-foreground: @text-color;
-	selected-nomral-background: @actbg;
-        normal-background: @background-color;
-        selected-urgent-foreground: @background-color;
-        urgent-foreground: @text-color;
-        selected-urgent-background: @urgbg;
-        urgent-background: @background-color;
-        selected-active-foreground: @winbg;
-        active-foreground: @winbg;
-        selected-active-background: @actbg;
-        active-background: @selbg;
-	max-history-size: 25;
-	combi-hide-mode-prefix: false;
-	pid: "/run/user/1000/rofi.pid";
-}
-
-Size and Placement {
-    width: 50;
-    lines: 15;
-    columns:1;
-    bw:1;
-    location:2;
-    padding:0;
-    xoffset:0;
-    yoffset:500;
- }
-
-Font and Colors {
+    modi: "drun,combi";
+    
+    columns: 1;
+    width: 15;
     font: "Liberation sans 12";
+    bw: 0;
 
+    location: 0;
+    yoffset: 0;
+    xoffset: 0;
 
+    drun-display-format: " {name}";
+    fixed-num-lines: true;
+
+    show-icons: true;
+    icon-theme: "papirus";
+
+    sidebar-mode: true;
+    combi-modi: "window";
+    seperator-style: "none";
+    hide-scrollbar: true;
+    scroll-method: 1;
+    window-format: "{w}.{c}.{t}";
+    click-to-exit: true;
+    show-match: false;
+
+    color-normal: "#10100E, #C6C6C4, #10100E, #C6C6C4, #10100E";
+    color-urgent: "#10100E, #0087BD, #10100E, #0087BD, #C6C6C4";
+    color-active: "#10100E, #C6C6C4, #10100E, #C6C6C4, #10100E";
+    color-window: "#10100E, #0087BD, #C6C6C4";
+
+    combo-hide-mode-prefix: false;
 }
+
 /* vim:ft=css
