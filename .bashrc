@@ -28,7 +28,7 @@ alias mic="pactl unload-module module-loopback; pactl load-module module-loopbac
 # This is to run a Discord bot that I use on my server.
 alias Blueebot="cd ~/Documents/Bluee/BlueeBot; python3 BlueeBotv4.py"
 
-#this is for EDMC (ED Market Connector)
+#this is for EDMC (a tool for Elite:Dangerous)
 alias EDMC="cd ~/Documents/Elite\ Dangerous/EDMarketConnector/; ./EDMarketConnector.py"
 
 #This is to start Alt1 Toolkit (a Runescape tool)

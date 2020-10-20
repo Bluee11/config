@@ -183,6 +183,10 @@ assign [class="Pulseeffects"] $ws5
 
 ### etc.
 
+# Making some windows default to floating
+for_window [class="Alt1linux"] floating enable
+for_window [class="Edmarketconnector"] floating enable
+
 # Volume
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
