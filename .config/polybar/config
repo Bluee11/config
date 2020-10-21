@@ -179,7 +179,7 @@ label = %date%  %time%
 
 ### Colors
 [colors]
-background     = #A910100E
+background     = #9610100E
 background-alt = #696969
 
 foreground     = #C6C6C4
