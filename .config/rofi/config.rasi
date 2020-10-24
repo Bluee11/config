@@ -2,12 +2,13 @@ configuration {
     modi: "drun,combi";
     
     columns: 1;
-    width: 15;
+    lines: 10;
+    width: 30;
     font: "Liberation sans 12";
     bw: 0;
 
-    location: 0;
-    yoffset: 0;
+    location: 2;
+    yoffset: 30;
     xoffset: 0;
 
     drun-display-format: " {name}";
