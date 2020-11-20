@@ -72,16 +72,16 @@ mode "resize" {
 ### Workspaces
 
 # Names
-set $ws1        ""
-set $ws2        ""
-set $ws3        ""
-set $ws4        ""
-set $ws5        ""
-set $ws6        ""
-set $ws7        "7"
-set $ws8        "8"
-set $ws9        "9"
-set $ws10       "10"
+set $ws1        "1: "
+set $ws2        "2: "
+set $ws3        "3: "
+set $ws4        "4: "
+set $ws5        "5: "
+set $ws6        "6: "
+set $ws7        "7: "
+set $ws8        " 8 "
+set $ws9        " 9 "
+set $ws10       " 10 "
 
 # Switch Workspaces
 bindsym $mod+1          workspace $ws1
@@ -184,6 +184,8 @@ assign [class="Lutris"] $ws2
 exec --no-startup-id  pulseeffects
 assign [class="Pulseeffects"] $ws5
 
+#FreeTube
+assign [class="FreeTube"] $ws7
 ### etc.
 
 # Making some windows default to floating

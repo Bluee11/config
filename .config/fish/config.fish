@@ -18,3 +18,6 @@ alias Blueebot='cd ~/Documents/Bluee/BlueeBot; python3 BlueeBotv4.py'
 alias EDMC='python3 ~/Documents/Elite\ Dangerous/EDMarketConnector/EDMarketConnector.py'
 
 alias Alt1='cd ~/Documents/Alt1; bash alt1run.sh'
+
+# Created by `userpath` on 2020-10-28 21:49:58
+set PATH $PATH /home/bluee/.local/bin
