@@ -107,7 +107,7 @@ bindsym $mod+Shift+8   move container to workspace $ws8
 bindsym $mod+Shift+9   move container to workspace $ws9
 bindsym $mod+Shift+0   move container to workspace $ws10
 
-#Assign to Display
+# Assign to Display
 workspace $ws1 output DP-5
 workspace $ws2 output DP-5
 workspace $ws3 output HDMI-0
@@ -136,7 +136,7 @@ client.background       #ffffff
 
 ### Gaps
 gaps inner 20
-
+gaps top 25
 bindsym $mod+G       gaps inner all toggle 20
 
 ### Launch Programs
@@ -159,8 +159,34 @@ exec_always --no-startup-id picom --experimental-backends
 #Feh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/FlatBlue.png
 
+#Dunst
+exec_always --no-startup-id dunst
+
+#ntfd
+exec_always --no-startup-id ntfd
+
 #Terminal
 bindsym $mod+Return exec alacritty
+
+exec alacritty -t Scratchpad
+for_window [title="Scratchpad"] move to scratchpad
+bindsym $mod+mod1+Return [title="Scratchpad"] scratchpad show
+
+exec alacritty -t Calc -e bc -q 
+for_window [title="Calc"] move to scratchpad
+bindsym $mod+mod1+c [title="Calc"] scratchpad show
+
+exec alacritty -t ncmpcpp -e ncmpcpp
+for_window [title="ncmpcpp"] move to scratchpad
+bindsym $mod+mod1+m [title="ncmpcpp"] scratchpad show
+
+exec alacritty -t blueebot 
+for_window [title="blueebot"] move to scratchpad
+bindsym $mod+mod1+1 [title="blueebot"] scratchpad show
+
+exec alacritty -t EDMC
+for_window [title="EDMC"] move to scratchpad
+bindsym $mod+mod1+2 [title="EDMC"] scratchpad show
 
 #Flameshot
 exec --no-startup-id flameshot
@@ -182,15 +208,25 @@ assign [class="Lutris"] $ws2
 
 #Pulseeffects
 exec --no-startup-id  pulseeffects
-assign [class="Pulseeffects"] $ws5
+for_window [class="Pulseeffects"] move to scratchpad
+bindsym $mod+mod1+a [class="Pulseeffects"] scratchpad show
 
 #FreeTube
 assign [class="FreeTube"] $ws7
+
+#Notepadqq
+exec notepadqq
+for_window [class="Notepadqq"] move to scratchpad
+bindsym $mod+mod1+n [class="Notepadqq"] scratchpad show
+
 ### etc.
 
 # Making some windows default to floating
 for_window [class="Alt1linux"] floating enable
+
 for_window [class="Edmarketconnector"] floating enable
+for_window [class="Edmarketconnector"] move to scratchpad
+bindsym $mod+mod1+e [class="Edmarketconnector"] scratchpad show
 
 # Volume
 set $refresh_i3status killall -SIGUSR1 i3status

@@ -1,10 +1,10 @@
 ### Bar
-[bar/BlueeBar]
+[bar/info]
 monitor      = ${env:MONITOR:}
-width        = 100%
+width        = 1880  
 height       = 25
-;offset-x    = 1%
-;offset-y    = 1%
+offset-x    = 20
+offset-y    = 5 
 radius       = 0
 fixed-center = true
 bottom       = false
@@ -31,7 +31,7 @@ font-3 = Font Awesome 5 Brands:pixelsize=14;3
 
 modules-left   = memory cpu temperature
 modules-center = i3 
-modules-right  = pulseaudio date powermenu
+modules-right  = mpd pulseaudio date powermenu
 
 tray-position    = ${env:TRAY_POSITION:right}
 tray-padding     = 2
@@ -39,12 +39,15 @@ tray-padding     = 2
 cursor-click  = pointer
 cursor-scroll = ns-resize
 
+wm-restack = i3
+override-redirect = true
+
 ### Modules
 
 [module/memory]
 type                     = internal/memory
 interval                 = 2
-format-prefix            = " "
+format-prefix            = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline         = #009F6B
 label                    = Mem %percentage_used%%
@@ -62,7 +65,7 @@ type             = internal/temperature
 thermal-zone     = 0
 warn-temperature = 60
 
-format                =CPU <ramp> <label>
+format                =CPU <label>
 format-underline      = #9A4EAE
 format-warn-underline = ${self.format-underline}
 
@@ -78,9 +81,9 @@ expand-right = true
 format-spacing = 2
 
 label-open                 = ""
-label-open-foreground      = ${colors.secondary}
+label-open-foreground      = ${colors.green}
 label-close                = " "
-label-close-foreground     = ${colors.secondary}
+label-close-foreground     = ${colors.green}
 label-seperator            = |
 label-seperator-foreground = ${colors.foreground-alt}
 
@@ -111,16 +114,14 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = true
-
 pin-workspaces = true
-
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.blue}
 
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.blue}
 label-focused-padding = 2
 
 label-unfocused = %name%
@@ -132,37 +133,27 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 strip-wsnumbers = true
-
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume           = <label-volume> <bar-volume>
-label-volume            = VOL %percentage%
-label-volume-foreground = ${root.foreground
+use-ui-max = false
 
-label-muted            = 🔇 muted
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+label-muted =  muted
 label-muted-foreground = #666
 
-bar-volume-width            = 10
-bar-volume-foreground-0     = #55aa55
-bar-volume-foreground-1     = #55aa55
-bar-volume-foreground-2     = #55aa55
-bar-volume-foreground-3     = #55aa55
-bar-volume-foreground-4     = #55aa55
-bar-volume-foreground-5     = #f5a70a
-bar-volume-foreground-6     = #ff5555
-bar-volume-gradient         = false
-bar-volume-indicator        = |
-bar-volume-indicator-font   = 2
-bar-volume-fill             = ─
-bar-volume-fill-font        = 2
-bar-volume-empty            = ─
-bar-volume-empty-font       = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+click-right = pavucontrol &
 
 [module/date]
 type     = internal/date
@@ -171,12 +162,12 @@ interval = 1
 date     = %a:%F
 date-alt = "%Y-%m-%d"
 
-time     = %r
+time  r  = %r
 time-alt = %H:%M:%S
 
 format-prefix            = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline         = #007FFF
+format-underline         = ${colors.blue-alt}
 
 label = %date%  %time%
 
@@ -188,9 +179,22 @@ background-alt = #696969
 foreground     = #C6C6C4
 foreground-alt = #FFFAFA
 
-primary   = #007FFF
-secondary = #009F6B
-alert     = #C40233
+black =     #10100E
+red =       #C40233
+green =     #009F6B
+yellow =    #FFD700
+blue =      #0087BD
+magenta =   #9A4EAE
+cyan =      #20B2AA
+white =     #C6C6C4
 
+black-alt =      #696969
+red-alt =        #FF2400
+green-alt =      #03C03C
+yellow-alt =     #FDFF00
+blue-alt =       #007FFF
+magenta-alt =    #FF1493
+cyan-alt =       #00CCCC
+white-alt =      #FFFAFA
 #I think I need this for Vim to highlight everything right.
 # vim:ft=dosini
