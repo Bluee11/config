@@ -2,10 +2,9 @@
 [bar/info]
 monitor      = ${env:MONITOR:}
 width        = 1880  
-height       = 25
-offset-x    = 20
-offset-y    = 5 
-radius       = 0
+height       = 27
+offset-x    = 20 
+offset-y    = 10
 fixed-center = true
 bottom       = false
 
@@ -102,7 +101,7 @@ menu-1-1-exec = menu-open-0
 menu-2-0      = " "
 menu-2-0-exec = shutdown now
 menu-2-1      = ""
-menu 2-1-exec = menu-open-0
+menu-2-1-exec = menu-open-0
 
 menu-3-0      = " "
 menu-3-0-exec = i3-msg exit
@@ -162,7 +161,7 @@ interval = 1
 date     = %a:%F
 date-alt = "%Y-%m-%d"
 
-time  r  = %r
+time    = %r
 time-alt = %H:%M:%S
 
 format-prefix            = 

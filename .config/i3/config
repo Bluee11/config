@@ -136,7 +136,7 @@ client.background       #ffffff
 
 ### Gaps
 gaps inner 20
-gaps top 25
+gaps top 37
 bindsym $mod+G       gaps inner all toggle 20
 
 ### Launch Programs
@@ -180,13 +180,13 @@ exec alacritty -t ncmpcpp -e ncmpcpp
 for_window [title="ncmpcpp"] move to scratchpad
 bindsym $mod+mod1+m [title="ncmpcpp"] scratchpad show
 
-exec alacritty -t blueebot 
-for_window [title="blueebot"] move to scratchpad
-bindsym $mod+mod1+1 [title="blueebot"] scratchpad show
+exec alacritty -t scpd1    
+for_window [title="scpd1"] move to scratchpad
+bindsym $mod+mod1+1 [title="scpd1"] scratchpad show
 
-exec alacritty -t EDMC
-for_window [title="EDMC"] move to scratchpad
-bindsym $mod+mod1+2 [title="EDMC"] scratchpad show
+exec alacritty -t scpd2
+for_window [title="scpd2"] move to scratchpad
+bindsym $mod+mod1+2 [title="scpd2"] scratchpad show
 
 #Flameshot
 exec --no-startup-id flameshot
@@ -214,17 +214,11 @@ bindsym $mod+mod1+a [class="Pulseeffects"] scratchpad show
 #FreeTube
 assign [class="FreeTube"] $ws7
 
-#Notepadqq
-exec notepadqq
-for_window [class="Notepadqq"] move to scratchpad
-bindsym $mod+mod1+n [class="Notepadqq"] scratchpad show
-
 ### etc.
 
-# Making some windows default to floating
+# I use this to make some windows float, you remove these unless you use the Alt1 toolkit for the game Runescape, or EDMC for Elite Dangerous.
 for_window [class="Alt1linux"] floating enable
 
-for_window [class="Edmarketconnector"] floating enable
 for_window [class="Edmarketconnector"] move to scratchpad
 bindsym $mod+mod1+e [class="Edmarketconnector"] scratchpad show
 
