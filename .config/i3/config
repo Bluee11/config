@@ -76,9 +76,9 @@ set $ws1        "1: "
 set $ws2        "2: "
 set $ws3        "3: "
 set $ws4        "4: "
-set $ws5        "5: "
-set $ws6        "6: "
-set $ws7        "7: "
+set $ws5        " 5 "
+set $ws6        " 6 "
+set $ws7        " 7 "
 set $ws8        " 8 "
 set $ws9        " 9 "
 set $ws10       " 10 "
@@ -112,8 +112,6 @@ workspace $ws1 output DP-5
 workspace $ws2 output DP-5
 workspace $ws3 output HDMI-0
 workspace $ws4 output HDMI-0
-workspace $ws5 output HDMI-0
-workspace $ws6 output HDMI-0
 ### Reload, Restart, and Shutdown
 bindsym $mod+Shift+c    reload
 bindsym $mod+Shift+r    restart
@@ -193,7 +191,7 @@ exec --no-startup-id flameshot
 bindsym --release Print exec --no-startup-id flameshot gui
 
 #Discord
-exec --no-startup-id Discord
+exec discord
 assign [class="discord"] $ws4
 
 #firefox
