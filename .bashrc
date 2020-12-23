@@ -34,4 +34,3 @@ alias EDMC="cd ~/Documents/Elite\ Dangerous/EDMarketConnector/; ./EDMarketConnec
 #This is to start Alt1 Toolkit (a Runescape tool)
 alias Alt1="cd Documents/Alt1; ./alt1run.sh"
 
-exec fish

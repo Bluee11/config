@@ -2,7 +2,7 @@
 fish_vi_key_bindings
 
 ##Theme Config
-set -g theme_display_git no
+set -g theme_display_git no 
 set -g theme_display_user yes
 set -g theme_title_use_abbreviated_path no
 set -g theme_color_scheme base16-dark

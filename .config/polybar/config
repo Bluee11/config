@@ -28,9 +28,9 @@ font-1 = Font Awesome 5 Free:pixelsize=14;3
 font-2 = Font Awesome 5 Free Solid:pixelsize=14;3
 font-3 = Font Awesome 5 Brands:pixelsize=14;3
 
-modules-left   = memory cpu temperature
+modules-left   = memory cpu temperature updates-pacman-aurhelper
 modules-center = i3 
-modules-right  = mpd pulseaudio date powermenu
+modules-right  = pulseaudio date powermenu
 
 tray-position    = ${env:TRAY_POSITION:right}
 tray-padding     = 2
@@ -73,6 +73,11 @@ ramp-1          = 
 ramp-2          = 
 ramp-foreground = ${colors.foreground-alt}
 
+[module/updates-pacman-aurhelper]
+type = custom/script
+exec = ~/.config/polybar/updates-pacman-aurhelper.sh
+interval = 600 
+
 [module/powermenu]
 type = custom/menu
 expand-right = true
@@ -86,24 +91,24 @@ label-close-foreground     = ${colors.green}
 label-seperator            = |
 label-seperator-foreground = ${colors.foreground-alt}
 
-menu-0-0      = " "
+menu-0-0      = ""
 menu-0-0-exec = menu-open-1
-menu-0-1      = " "
+menu-0-1      = ""
 menu-0-1-exec = menu-open-2
 menu-0-2      = ""
 menu-0-2-exec = menu-open-3
 
-menu-1-0      = " "
+menu-1-0      = ""
 menu-1-0-exec = reboot     
 menu-1-1      = ""
 menu-1-1-exec = menu-open-0
 
-menu-2-0      = " "
+menu-2-0      = ""
 menu-2-0-exec = shutdown now
 menu-2-1      = ""
 menu-2-1-exec = menu-open-0
 
-menu-3-0      = " "
+menu-3-0      = ""
 menu-3-0-exec = i3-msg exit
 menu-3-1      = ""
 menu-3-1-exec = menu-open-0
@@ -136,6 +141,38 @@ label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 strip-wsnumbers = true
+
+[module/mpd]
+type = internal/mpd
+
+host = localhost
+interval = 1  
+
+format-online = <icon-prev> <icon-seekb> <toggle> <icon-seekf> <icon-next> <bar-progress> <label-time>
+
+label-offline = 🎜 mpd is offline
+
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf =  
+icon-random = 
+icon-repeat = 
+icon-repeatone = 
+icon-single = 🔂
+icon-consume = ✀
+
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+
+bar-progress-width = 20
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
 [module/pulseaudio]
 type = internal/pulseaudio
 

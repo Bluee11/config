@@ -142,6 +142,9 @@ bindsym $mod+G       gaps inner all toggle 20
 #xss-lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+#lxsession
+exec --no-startup-id lxsession
+
 #Network Manager
 exec --no-startup-id nm-applet
 
