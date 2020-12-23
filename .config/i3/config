@@ -212,9 +212,6 @@ exec --no-startup-id  pulseeffects
 for_window [class="Pulseeffects"] move to scratchpad
 bindsym $mod+mod1+a [class="Pulseeffects"] scratchpad show
 
-#FreeTube
-assign [class="FreeTube"] $ws7
-
 ### etc.
 
 # I use this to make some windows float, you remove these unless you use the Alt1 toolkit for the game Runescape, or EDMC for Elite Dangerous.
