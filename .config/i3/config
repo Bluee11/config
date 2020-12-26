@@ -74,14 +74,24 @@ mode "resize" {
 # Names
 set $ws1        "1: "
 set $ws2        "2: "
-set $ws3        "3: "
-set $ws4        "4: "
+set $ws3        " 3 "
+set $ws4        " 4 "
 set $ws5        " 5 "
 set $ws6        " 6 "
 set $ws7        " 7 "
 set $ws8        " 8 "
 set $ws9        " 9 "
 set $ws10       " 10 "
+set $ws11       " 11: "
+set $ws12       " 12: "
+set $ws13       " 13: "
+set $ws14       " 14 "
+set $ws15       " 15 "
+set $ws16       " 16 "
+set $ws17       " 17 "
+set $ws18       " 18 "
+set $ws19       " 19 "
+set $ws20       " 20 "
 
 # Switch Workspaces
 bindsym $mod+1          workspace $ws1
@@ -94,24 +104,61 @@ bindsym $mod+7          workspace $ws7
 bindsym $mod+8          workspace $ws8
 bindsym $mod+9          workspace $ws9
 bindsym $mod+0          workspace $ws10
+bindsym mod1+1          workspace $ws11
+bindysm mod1+2          workspace $ws12
+bindsym mod1+3          workspace $ws13
+bindsym mod1+4          workspace $ws14
+bindsym mod1+5          workspace $ws15
+bindsym mod1+6          workspace $ws16
+bindsym mod1+7          workspace $ws17
+bindsym mod1+8          workspace $ws18
+bindsym mod1+9          workspace $ws19
+bindsym mod1+0          workspace $ws20
 
 # Move Window to Workspace
-bindsym $mod+Shift+1   move container to workspace $ws1
-bindsym $mod+Shift+2   move container to workspace $ws2
-bindsym $mod+Shift+3   move container to workspace $ws3
-bindsym $mod+Shift+4   move container to workspace $ws4
-bindsym $mod+Shift+5   move container to workspace $ws5
-bindsym $mod+Shift+6   move container to workspace $ws6
-bindsym $mod+Shift+7   move container to workspace $ws7
-bindsym $mod+Shift+8   move container to workspace $ws8
-bindsym $mod+Shift+9   move container to workspace $ws9
-bindsym $mod+Shift+0   move container to workspace $ws10
+bindsym $mod+Shift+1    move container to workspace $ws1
+bindsym $mod+Shift+2    move container to workspace $ws2
+bindsym $mod+Shift+3    move container to workspace $ws3
+bindsym $mod+Shift+4    move container to workspace $ws4
+bindsym $mod+Shift+5    move container to workspace $ws5
+bindsym $mod+Shift+6    move container to workspace $ws6
+bindsym $mod+Shift+7    move container to workspace $ws7
+bindsym $mod+Shift+8    move container to workspace $ws8
+bindsym $mod+Shift+9    move container to workspace $ws9
+bindsym $mod+Shift+0    move container to workspace $ws10
+bindsym mod1+Shift+1    move container to workspace $ws11
+bindsym mod1+Shift+2    move container to workspace $ws12
+bindsym mod1+Shift+3    move container to workspace $ws13
+bindsym mod1+Shift+4    move container to workspace $ws14
+bindsym mod1+Shift+5    move container to workspace $ws15
+bindsym mod1+Shift+6    move container to worksapce $ws16
+bindsym mod1+Shift+7    move container to workspace $ws17
+bindsym mod1+Shift+8    move container to workspace $ws18
+bindsym mod1+Shift+9    move container to workspace $ws19
+bindsym mod1+Shift+0    move container to workspace $ws20
 
 # Assign to Display
-workspace $ws1 output DP-5
-workspace $ws2 output DP-5
-workspace $ws3 output HDMI-0
-workspace $ws4 output HDMI-0
+workspace $ws1  output DP-5
+workspace $ws2  output DP-5 
+workspace $ws3  output DP-5
+workspace $ws4  output DP-5
+workspace $ws5  output DP-5
+workspace $ws6  output DP-5
+workspace $ws7  output DP-5
+workspace $ws8  output DP-5
+workspace $ws9  output DP-5
+workspace $ws10 output DP-5
+workspace $ws11 output HDMI-0
+workspace $ws12 output HDMI-0
+workspace $ws13 output HDMI-0
+workspace $ws14 output HDMI-0
+workspace $ws15 output HDMI-0
+workspace $ws16 output HDMI-0
+workspace $ws17 output HDMI-0
+workspace $ws18 output HDMI-0
+workspace $ws19 output HDMI-0
+workspace $ws20 output HDMI-0
+
 ### Reload, Restart, and Shutdown
 bindsym $mod+Shift+c    reload
 bindsym $mod+Shift+r    restart
@@ -195,11 +242,11 @@ bindsym --release Print exec --no-startup-id flameshot gui
 
 #Discord
 exec discord
-assign [class="discord"] $ws4
+assign [class="discord"] $ws13
 
 #firefox
 exec firefox
-assign [class="Firefox"] $ws3
+assign [class="Firefox"] $ws11
 
 #Steam
 assign [class="Steam"] $ws2
