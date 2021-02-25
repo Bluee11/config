@@ -12,10 +12,14 @@ This repository is where I store my dotfiles, and potentially other useful resou
 <li>Dunst       -   Notifications</li>
 
 # Software I use 
-<li>Kitty       -   Terminal</li>
-<li>Zsh         -   Shell</li>
+<li>Kitty       -   Primary terminal emulator</li>
+<li>Alacritty   -   Backup terminal emulator</li>
+<li>Zsh         -   Primary shell</li>
 <li>Flameshot   -   Screenshots</li>
-<li>Firefox     -   Web Browser</li>
-<li>Thunar      -   Gui File Explorer</li>
-<li>Leafpad     -   Gui Text Editor</li>
+<li>Firefox     -   Primary web browser</li>
+<li>Brave       -   Backup web browser</li>
+<li>Ranger      -   Terminal based file explorer</li>
+<li>Thunar      -   Gui based file explorer</li>
+<li>Vim         -   Terminal based text editor</li>
+<li>Leafpad     -   Gui based text editor</li>
 
