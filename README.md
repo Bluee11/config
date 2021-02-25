@@ -22,4 +22,6 @@ This repository is where I store my dotfiles, and potentially other useful resou
 <li>Thunar      -   Gui based file explorer</li>
 <li>Vim         -   Terminal based text editor</li>
 <li>Leafpad     -   Gui based text editor</li>
+<li>ncmpcpp     -   Terminal based music player for mpd</li>
+<li>bc          -   Terminal based calculator</li>
 
