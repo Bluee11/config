@@ -7,6 +7,7 @@ set -g theme_display_user yes
 set -g theme_title_use_abbreviated_path no
 set -g theme_color_scheme base16-dark
 set -g theme_display_date no
+set -g theme_powerline_fonts no
 
 ##Aliases
 #The main reason for this line is because Bashtop is easier to say than bpytop.
@@ -14,9 +15,6 @@ alias bashtop='bpytop'
 
 #This disables any active loopback modules that play the active microphone through heaphones/speakers, and then enables just one, just incase you somehow loaded more than one.
 alias mic='pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1'
-
-#This is a bot I run on a Discord server. You can remove this.
-alias Blueebot='cd ~/Documents/Bluee/BlueeBot; python3 BlueeBotv4.py'
 
 #This is a third party tool for the game "Elite: Dangerous". You can remove this.
 alias EDMC='python3 ~/Documents/Elite\ Dangerous/EDMarketConnector/EDMarketConnector.py'

@@ -2,6 +2,10 @@
  background_opacity: 0.70
  save_to_clipboard: true
 
+ padding:
+   x: 10
+   y: 10
+
  cursor:
   style: Block 
   unfocused_hollow: true
@@ -11,43 +15,38 @@
  font:
    size: 10
    normal:
+     family: Fura Code Nerd Font
+
+   normal:
+     family: "MesloLGS NF"
+
+   normal:
      family: Liberation Mono  
-     style: Regular
 
-   bold:
-     family: Liberation Mono
-     style: Bold
-
-   italic:
-     family: Liberation Mono
-     style: Italic
-     
-# Colors (Blood Moon)
  colors:
   # Default colors
   primary:
-    background: '#10100E'
-    foreground: '#C6C6C4'
+    background: '0x000000'
+    foreground: '0xababab'
 
   # Normal colors
   normal:
-    black:   '#10100E'
-    red:     '#C40233'
-    green:   '#009F6B'
-    yellow:  '#FFD700'
-    blue:    '#0087BD'
-    magenta: '#9A4EAE'
-    cyan:    '#20B2AA'
-    white:   '#C6C6C4'
+    black:   '0x000000'
+    red:     '0xe92f2f'
+    green:   '0x0ed839'
+    yellow:  '0xdddd13'
+    blue:    '0x3b48e3'
+    magenta: '0xf996e2'
+    cyan:    '0x23edda'
+    white:   '0xababab'
 
   # Bright colors
   bright:
-    black:   '#696969'
-    red:     '#FF2400'
-    green:   '#03C03C'
-    yellow:  '#FDFF00'
-    blue:    '#007FFF'
-    magenta: '#FF1493'
-    cyan:    '#00CCCC'
-    white:   '#FFFAFA'
-
+    black:   '0x343434'
+    red:     '0xe92f2f'
+    green:   '0x0ed839'
+    yellow:  '0xdddd13'
+    blue:    '0x3b48e3'
+    magenta: '0xf996e2'
+    cyan:    '0x23edda'
+    white:   '0xf9f9f9'

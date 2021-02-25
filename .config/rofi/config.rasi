@@ -8,7 +8,7 @@ configuration {
     bw: 0;
 
     location: 2;
-    yoffset: 50;
+    yoffset: 30;
     xoffset: 0;
 
     drun-display-format: " {name}";
@@ -26,10 +26,10 @@ configuration {
     click-to-exit: true;
     show-match: false;
 
-    color-normal: "#0010100E, #B3C6C6C4, #0010100E, #B30087BD, #10100E";
-    color-urgent: "#0010100E, #000087BD, #0010100E, #000087BD, #00C6C6C4";
-    color-active: "#B310100E, #B30087BD, #B310100E, #B30087BD, #B310100E";
-    color-window: "#B310100E, #B3C6C6C4, #B30087BD";
+    color-normal: "#00000000, #B3ababab, #00000000, #B33b48e3, #000000";
+    color-urgent: "#00000000, #003b48e3, #00000000, #003b48e3, #00ababab";
+    color-active: "#b3000000, #B33b48e3, #B3000000, #B33b48e3, #B3000000";
+    color-window: "#b3000000, #b3ababab, #B3000000";
 
     combo-hide-mode-prefix: false;
 }
