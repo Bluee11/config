@@ -246,8 +246,8 @@ for_window [title="scpd-calc"] move to scratchpad
 bindsym $mod+mod1+c [title="scpd-calc"] scratchpad show
 
 exec kitty -T scpd-ncmpcpp -e ncmpcpp
-for_window [title="ncmpcpp"] move to scratchpad
-bindsym $mod+mod1+m [title="ncmpcpp"] scratchpad show
+for_window [title="scpd-ncmpcpp"] move to scratchpad
+bindsym $mod+mod1+m [title="scpd-ncmpcpp"] scratchpad show
 
 exec kitty -T scpd1        
 for_window [title="scpd1"] move to scratchpad

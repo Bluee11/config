@@ -15,4 +15,7 @@ This repository is where I store my dotfiles, and potentially other useful resou
 <li>Kitty       -   Terminal</li>
 <li>Zsh         -   Shell</li>
 <li>Flameshot   -   Screenshots</li>
+<li>Firefox     -   Web Browser</li>
+<li>Thunar      -   Gui File Explorer</li>
+<li>Leafpad     -   Gui Text Editor</li>
 
