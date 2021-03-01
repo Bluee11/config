@@ -21,6 +21,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 alias ls="ls --color"
 alias bashtop="bpytop"
 alias mic="pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1"
-
+alias yay="paru"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
