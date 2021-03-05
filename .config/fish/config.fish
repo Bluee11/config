@@ -14,4 +14,4 @@ source $HOME/.aliases
 
 
 # Created by `userpath` on 2020-10-28 21:49:58
-set PATH $PATH /home/bluee/.local/bin
+set PATH $PATH $HOME/.local/bin
