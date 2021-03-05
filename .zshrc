@@ -10,6 +10,7 @@ compinit
 promptinit
 
 autoload -Uz tetriscurses
+
 #PROMPT='%F{#0087BD}%n%f@%F{#20B2AA}%m%f %F{#9A4EAE}%B%~%b%f %# '
 PROMPT='%F{#0087BD}%n%f%F{#9A4EAE}[%B%~%b]%f'
 
@@ -17,10 +18,26 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+function chpwd() {
+        emulate -L zsh
+            ls 
+        }
+
+setopt autocd
+
 #Aliases
-alias ls="ls --color"
+alias sudo="sudo "
+alias ls="ls --color=auto --group-directories-first"
+alias ip="ip -c"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias diff="colordiff"
 alias bashtop="bpytop"
 alias mic="pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1"
 alias yay="paru"
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias clean="paru -R $(paru -Qtdq)"
+

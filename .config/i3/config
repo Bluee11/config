@@ -226,7 +226,7 @@ bindsym $mod+Tab exec --no-startup-id "rofi -show drun "
 exec_always --no-startup-id picom --experimental-backends
 
 #Feh
-exec_always --no-startup-id feh --bg-scale /home/bluee/Pictures/Wallpapers/FlatBlue.png
+exec_always --no-startup-id feh --randomize --bg-scale $HOME/Pictures/Wallpapers/
 
 #Dunst
 exec_always --no-startup-id dunst
@@ -279,16 +279,6 @@ assign [class="Lutris"] $ws2
 exec --no-startup-id  pulseeffects
 for_window [class="Pulseeffects"] move to scratchpad
 bindsym $mod+mod1+a [class="Pulseeffects"] scratchpad show
-
-#lxappearance
-for_window [title="Customize Look and Feel"] floating enable
-### etc.
-
-# I use this to make some windows float, you remove these unless you use the Alt1 toolkit for the game Runescape, or EDMC for Elite Dangerous.
-for_window [class="Alt1linux"] floating enable
-
-for_window [class="Edmarketconnector"] move to scratchpad
-bindsym $mod+mod1+e [class="Edmarketconnector"] scratchpad show
 
 # Volume
 set $refresh_i3status killall -SIGUSR1 i3status
