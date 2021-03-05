@@ -1,0 +1,17 @@
+#This is a file to store aliases that can hopefully use the across bash, zsh, and fish.
+#Becaue fish sometimes uses a different syntax for some commands, you might need to either restructure commandsso that they can work in both bash and fish, or set the alias up in the bash/fish config file separate from this alias file.
+
+#General
+alias sudo='sudo '
+alias yay='paru'
+alias ls='ls --color=auto --group-directories-first'
+alias ip='ip -c'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias diff='colordiff'
+alias bashtop='bpytop'
+
+#Extra
+alias clean='paru -Qtdq | paru -R' 
+alias mic='pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1'
