@@ -231,9 +231,6 @@ exec_always --no-startup-id feh --randomize --bg-scale $HOME/Pictures/Wallpapers
 #Dunst
 exec_always --no-startup-id dunst
 
-#ntfd
-exec_always --no-startup-id ntfd
-
 #Terminal
 bindsym $mod+Return exec kitty    
 
