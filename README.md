@@ -2,7 +2,7 @@
 
 This repository is where I store my dotfiles, and potentially other useful resources I might use.
 
-#Software managed by these dotfiles
+##Software managed by these dotfiles
 [<li>i3 gaps](https://github.com/Airblader/i3) - window manager</li>
 [<li>polybar](https://github.com/polybar/polybar) - status bar</li>
 [<li>rofi](https://github.com/davatorium/rofi) - application launcher</li>
@@ -13,7 +13,7 @@ This repository is where I store my dotfiles, and potentially other useful resou
 [<li>fish](https://fishshell.com/) - shell</li>
 [<li>Dunst](https://github.com/dunst-project/dunst) - notification viewer</li>
 
-#Software mentioned and/or used in these dotfiles
+##Software mentioned and/or used in these dotfiles
 [<li>bc](https://www.gnu.org/software/bc/) - calculator</li>
 [<li>ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) - music player</li>
 [<li>Pulseeffects](https://github.com/wwmm/pulseeffects) - audio effects</li>
@@ -21,7 +21,7 @@ This repository is where I store my dotfiles, and potentially other useful resou
 [<li>Feh](https://feh.finalrewind.org/) - image viewer/wallpaper manager</li>
 [<li>Flameshot](https://github.com/flameshot-org/flameshot) - screenshot capture</li>
 
-#Fonts used in these dotfiles
+##Fonts used in these dotfiles
 [<li>Liberation Mono](https://github.com/liberationfonts/liberation-fonts)</li>
 [<li>Nerd fonts fira code](https://github.com/ryanoasis/nerd-fonts)</li>
 
