@@ -43,6 +43,14 @@ bindsym $mod+Shift+space    floating toggle
 bindsym $mod+space          focus mode_toggle
 floating_modifier           $mod
 
+#Trying out something I found on Reddit That should cause popup windows to be floating instead of tile
+for_window [window_role="pop-up"]       floating enable
+for_window [window_role="bubble"]       floating enable
+for_window [window_role="task_dialog"]  floating enable
+for_window [window_role="Preferences"]  floating enable
+for_window [window_type="dialog"]       floating enable
+for_window [window_type="menu"]         floating enable
+
 # Container
 bindsym $mod+s        layout stacking
 bindsym $mod+w        layout tabbed
@@ -108,12 +116,12 @@ bindsym mod1+1          workspace $ws11
 bindsym mod1+2          workspace $ws12
 bindsym mod1+3          workspace $ws13
 bindsym mod1+4          workspace $ws14
-bindsym mod1+5          workspace $ws15
-bindsym mod1+6          workspace $ws16
-bindsym mod1+7          workspace $ws17
-bindsym mod1+8          workspace $ws18
-bindsym mod1+9          workspace $ws19
-bindsym mod1+0          workspace $ws20
+#bindsym mod1+5          workspace $ws15
+#bindsym mod1+6          workspace $ws16
+#bindsym mod1+7          workspace $ws17
+#bindsym mod1+8          workspace $ws18
+#bindsym mod1+9          workspace $ws19
+#bindsym mod1+0          workspace $ws20
 
 # Move Window to Workspace
 bindsym $mod+Shift+1    move container to workspace $ws1
@@ -201,7 +209,7 @@ client.placeholder      $background $background $foreground $background $backgro
 client.background       $foreground
 
 ### Gaps
-gaps inner 20
+#gaps inner 20
 #gaps top 37
 bindsym $mod+G       gaps inner all toggle 20
 
@@ -226,7 +234,7 @@ bindsym $mod+Tab exec --no-startup-id "rofi -show drun "
 exec_always --no-startup-id picom --experimental-backends
 
 #Feh
-exec_always --no-startup-id feh --randomize --bg-scale $HOME/Pictures/Wallpapers/
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/ArchLinux.png
 
 #Dunst
 exec_always --no-startup-id dunst
@@ -235,23 +243,23 @@ exec_always --no-startup-id dunst
 bindsym $mod+Return exec kitty    
 
 exec kitty -T Scratchpad    
-for_window [title="Scratchpad"] move to scratchpad
-bindsym $mod+mod1+Return [title="Scratchpad"] scratchpad show
+for_window [title="Scratchpad"]                 move to scratchpad
+bindsym $mod+mod1+Return [title="Scratchpad"]   scratchpad show
 
 exec kitty -T scpd-calc -e bc -q     
-for_window [title="scpd-calc"] move to scratchpad
+for_window [title="scpd-calc"]          move to scratchpad
 bindsym $mod+mod1+c [title="scpd-calc"] scratchpad show
 
 exec kitty -T scpd-ncmpcpp -e ncmpcpp
-for_window [title="scpd-ncmpcpp"] move to scratchpad
-bindsym $mod+mod1+m [title="scpd-ncmpcpp"] scratchpad show
+for_window [title="scpd-ncmpcpp"]           move to scratchpad
+bindsym $mod+mod1+m [title="scpd-ncmpcpp"]  scratchpad show
 
 exec kitty -T scpd1        
-for_window [title="scpd1"] move to scratchpad
+for_window [title="scpd1"]          move to scratchpad
 bindsym $mod+mod1+1 [title="scpd1"] scratchpad show
 
 exec kitty -T scpd2   
-for_window [title="scpd2"] move to scratchpad
+for_window [title="scpd2"]          move to scratchpad
 bindsym $mod+mod1+2 [title="scpd2"] scratchpad show
 
 #Flameshot
@@ -274,9 +282,22 @@ assign [class="Lutris"] $ws2
 
 #Pulseeffects
 exec --no-startup-id  pulseeffects
-for_window [class="Pulseeffects"] move to scratchpad
-bindsym $mod+mod1+a [class="Pulseeffects"] scratchpad show
+for_window [class="Pulseeffects"]           move to scratchpad
+bindsym $mod+mod1+a [class="Pulseeffects"]  scratchpad show
 
+#Mod Organizer
+#I need these to get popup windows in Mod Organizer to float instead of tiling
+#Unfortunately, I don't think you can get fomod installers to float because their titles are the mod's name
+#So unless there's something I missed, those are stuck tiling for now
+for_window [title="Mod Exists"]                         floating enable
+for_window [title="ModOrganizer"]                       floating enable
+for_window [title="Nemesis Unlimited Behavior Engine"]  floating enable
+#Protontricks
+for_window [title="Choose Game"] floating enable
+#Runekit
+for_window [class="RuneKit"]    floating enable
+#EDMarketConnector
+for_window [title="E:D Market Connector"] floating enable
 # Volume
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status

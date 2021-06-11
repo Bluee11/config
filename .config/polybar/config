@@ -23,10 +23,10 @@ padding-right = 2
 module-margin-left  = 1
 module-margin-right = 2
 
-font-0 = Liberation Mono:pixelsize=10;1
+font-0 = Iosevka Mono:pixelsize=10;1
 font-1 = Fura Code Nerd Font:pixelsize=14;3
 
-modules-left   = memory cpu temperature updates-pacman-aurhelper
+modules-left   = memory cpu temperature system-nvidia-smi updates-pacman-aurhelper
 modules-center = i3 
 modules-right  = pulseaudio date powermenu
 
@@ -204,6 +204,12 @@ format-prefix-foreground = ${colors.foreground}
 format-underline         = ${colors.blue-alt}
 
 label = %date%  %time%
+
+[module/system-nvidia-smi]
+type                =   custom/script
+exec                =   ~/.config/polybar/system-nvidia-smi.sh
+interval            =   2
+format-underline    =   ${colors.green}
 
 ### Colors
 [colors]

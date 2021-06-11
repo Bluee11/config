@@ -9,6 +9,8 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+zstyle ':completion:*' menu select
+
 autoload -Uz tetriscurses
 
 #PROMPT='%F{#0087BD}%n%f@%F{#20B2AA}%m%f %F{#9A4EAE}%B%~%b%f %# '
@@ -28,3 +30,8 @@ function chpwd() {
 
 setopt autocd
 
+#commenting out for now since whenever i run "sudo vim" it asks to correct vim to .vim
+#(yes I know I should be running 'sudoedit' instead of 'sudo $EDITOR'
+setopt correctall
+
+export PATH=$HOME/.local/bin:$PATH

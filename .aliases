@@ -14,4 +14,7 @@ alias bashtop='bpytop'
 
 #Extra
 alias clean='paru -Qtdq | paru -R' 
-alias mic='pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1'
+
+#pw-loopback is for Pipewire, and pactl is for Pulseaudio
+alias mic ='pw-loopback'
+#alias mic='pactl unload-module module-loopback; pactl load-module module-loopback latency_msec=1'
